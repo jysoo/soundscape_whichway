@@ -1,0 +1,16 @@
+<GridLayout>
+    <StackLayout orientation="vertical">
+    <Label textWrap="true" text={{nl}} class="h3" textAlignment="center"></Label>
+    <Label textWrap="true" [text]="computeStatus" class="h3" textAlignment="center"></Label>
+    <Label textWrap="true" text={{nl}} class="h3" textAlignment="center"></Label>
+    <ScrollView orientation="vertical" ios.pagingEnabled="true" left="0" top="0" width="100%" height="80%">
+        <ListView [items]="pois" class="list-group">
+                <ng-template let-poi="item">
+                    <GridLayout class="list-group-item">
+                        <Label textWrap="true" [text]="poi" editable="false" class="h4"></Label>
+                    </GridLayout>
+                </ng-template>
+        </ListView>
+    </ScrollView>
+    </StackLayout>
+</GridLayout>

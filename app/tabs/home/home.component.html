@@ -1,0 +1,11 @@
+<GridLayout class="page page-content">
+	<StackLayout>
+		<Label textWrap="true" text={{desc}} class="h4" textAlignment="center"></Label>
+		<Label textWrap="true" text={{instr}} class="h3" textAlignment="center"></Label>
+		<ListPicker [items]="locationList" selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event)" class="p-15"></ListPicker>
+		<!--<Label textWrap="true" text={{nl}} class="h3" textAlignment="center"></Label>-->
+        <Button text="Set location" (tap)="computePathsPOIs()" class="btn btn-primary btn-active"></Button>
+        <!--<Label textWrap="true" text={{nl}} class="h3" textAlignment="center"></Label>-->
+        <Label textWrap="true" [text]="computeStatus" class="h3" textAlignment="center"></Label>
+	</StackLayout>	
+</GridLayout>
